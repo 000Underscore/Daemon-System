@@ -9,7 +9,7 @@ document
     const data = {
       name: formData.get("name"),
       age: formData.get("age"),
-      email: formData.get("email"),
+      email: formData.get("discord"),
       source: formData.get("source"),
       experience: formData.get("experience"),
       missions: missions,

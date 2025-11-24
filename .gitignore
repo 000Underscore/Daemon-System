@@ -1,1 +1,28 @@
+# Dépendances
 node_modules/
+
+# Fichiers de build
+dist/
+build/
+
+# Fichiers de cache
+.cache/
+*.log
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+
+# Fichiers IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Autres fichiers
+*.bat

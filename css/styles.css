@@ -218,6 +218,13 @@ body {
   margin-top: 40px;
 }
 
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
 /* #crt:before {
   content: " ";
   display: block;
@@ -245,10 +252,6 @@ header {
   padding: 24px;
   height: 75px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.2px);
-  -webkit-backdrop-filter: blur(5.2px);
 }
 
 .header-left > a {
@@ -329,6 +332,10 @@ label {
   margin-bottom: 5px;
 }
 
+option {
+  background-color: var(--color-gray);
+}
+
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -405,14 +412,18 @@ textarea {
 
 button[type="submit"] {
   padding: 10px 20px;
-  background-color: var(--color-green);
-  color: var(--color-font);
+  color: var(--color-green);
   font-family: "Rubik";
-  border: none;
+  border: 1px var(--color-green) solid;
   border-radius: 3px;
   cursor: pointer;
 }
 
 #applications-btn {
   align-self: center;
+}
+
+#applications-btn:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1);
 }

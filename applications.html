@@ -13,12 +13,12 @@
     ></script>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Daemon System - Applications</title>
+    <title>Daemon System - CANDIDATER</title>
   </head>
   <!-- body > class="crt" -->
   <body>
     <div id="dither-root"></div>
-    <header>
+    <header class="glass">
       <div class="header-left">
         <a href="index.html">
           <img
@@ -50,7 +50,7 @@
             <a href="contact.html">CONTACT</a>
           </li>
           <li class="nav-item cta">
-            <a href="applications.html">JOIN US</a>
+            <a href="applications.html">CANDIDATER</a>
           </li>
         </ul>
       </div>
@@ -64,7 +64,15 @@
               >*</strong
             ></label
           >
-          <input type="text" id="name" name="name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Votre nom sur Star Citizen"
+            autocomplete="off"
+            class="glass"
+            required
+          />
         </div>
 
         <div class="form-group">
@@ -73,43 +81,52 @@
               >*</strong
             ></label
           >
-          <input type="number" id="age" name="age" min="18" required />
+          <input
+            type="number"
+            id="age"
+            name="age"
+            min="18"
+            placeholder="Majorité requise"
+            autocomplete="off"
+            class="glass"
+            required
+          />
         </div>
 
         <div class="form-group">
-          <label for="email"
-            >Adresse Mail<strong class="required" title="Champ obligatoire"
+          <label for="discord"
+            >Discord<strong class="required" title="Champ obligatoire"
               >*</strong
             ></label
           >
-          <input type="email" id="email" name="email" required />
+          <input
+            type="text"
+            id="discord"
+            name="discord"
+            placeholder="Votre ID discord"
+            autocomplete="off"
+            class="glass"
+            required
+          />
         </div>
 
         <div class="form-group">
-          <label for="source"
-            >Comment nous avez-vous connu ?<strong
-              class="required"
-              title="Champ obligatoire"
-              >*</strong
-            ></label
-          >
-          <select id="source" name="source">
-            <option value="">Sélectionnez une option</option>
+          <label for="source">Comment nous avez-vous connu ?</label>
+          <select id="source" name="source" class="glass">
+            <option value=""></option>
             <option value="search">Moteur de recherche</option>
-            <option value="social">Réseaux sociaux</option>
+            <option value="social">
+              Réseaux sociaux (Forums, Twitch, etc)
+            </option>
             <option value="friend">Recommandation</option>
             <option value="other">Autre</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="experience"
-            >Temps de jeu<strong class="required" title="Champ obligatoire"
-              >*</strong
-            ></label
-          >
-          <select id="experience" name="experience" required>
-            <option value="">Sélectionnez une option</option>
+          <label for="experience">Temps de jeu</label>
+          <select id="experience" name="experience" class="glass">
+            <option value=""></option>
             <option value="100">-100</option>
             <option value="300">300+</option>
             <option value="500">500+</option>
@@ -156,6 +173,8 @@
             name="lore"
             rows="5"
             placeholder="facultatif"
+            autocomplete="off"
+            class="glass"
           ></textarea>
         </div>
 
@@ -166,10 +185,14 @@
             name="irl"
             rows="5"
             placeholder="facultatif"
+            autocomplete="off"
+            class="glass"
           ></textarea>
         </div>
 
-        <button id="applications-btn" type="submit">Envoyer</button>
+        <button id="applications-btn" class="glass" type="submit">
+          ENVOYER
+        </button>
       </form>
     </main>
     <!-- // -->
