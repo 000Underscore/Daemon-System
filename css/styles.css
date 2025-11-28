@@ -4,6 +4,7 @@
   --color-gray: oklch(43.9% 0 0);
   --color-green: oklch(79.2% 0.209 151.711);
   --color-red: oklch(57.7% 0.245 27.325);
+  --color-blue: oklch(0.8431 0.1437 203.76);
   --color-font: oklch(1 0 97);
   /** FONT  */
   --font-family: "Rubik";
@@ -139,6 +140,8 @@
   border: 0 solid;
   margin: 0;
   padding: 0;
+  font-family: "Rubik";
+  color: var(--color-font);
 }
 
 ::selection {
@@ -148,22 +151,6 @@
 
 .required {
   color: var(--color-red);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-li,
-strong,
-label,
-input,
-select {
-  font-family: "Rubik";
 }
 
 ol,
@@ -196,28 +183,17 @@ strong {
   color: var(--color-green);
 }
 
-a {
-  padding: 6px 8px 6px 8px;
-}
-
-a:hover {
-  color: var(--color-green);
-  background-color: var(--color-gray);
-  transition: 0.2s;
-  border-radius: 3px;
-}
-
 body {
   background-color: var(--color-bg);
-  color: var(--color-font);
-  display: flex;
-  flex-direction: column;
 }
 
 .container {
   margin-top: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
+/* Effet transparent */
 .glass {
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -225,25 +201,10 @@ body {
   -webkit-backdrop-filter: blur(3px);
 }
 
-/* #crt:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.25) 50%
-  );
-  background-size: 100% 3px;
-  z-index: 2;
-  pointer-events: none;
-} */
+/*^ ///////////////////////////////////////////////////// */
+/*^ //////////////         HEADER         /////////////// */
+/*^ ///////////////////////////////////////////////////// */
 
-/*& HEADER */
 header {
   display: flex;
   flex-direction: row;
@@ -254,6 +215,7 @@ header {
   width: 100%;
 }
 
+/* "aemon System v1.0.0" */
 .header-left > a {
   display: flex;
   align-items: baseline;
@@ -274,6 +236,7 @@ header {
   margin-left: 9px;
 }
 
+/* navbar */
 .nav-list {
   display: flex;
   justify-content: flex-end;
@@ -281,26 +244,142 @@ header {
   gap: 24px;
 }
 
-.cta {
-  background-color: var(--color-red);
-  padding: 3px 6px 3px 6px;
+.nav-list a {
+  padding: 6px 8px 6px 8px;
+}
+
+.nav-list li:not(:last-child) a:hover {
+  color: var(--color-green);
+  background-color: var(--color-gray);
+  transition: 0.2s;
   border-radius: 3px;
-  transition: transform 0.2s;
+}
+
+/* Bouton candidater */
+/* From Uiverse.io by VisithaGalabada */
+.cta,
+.cta::after {
+  padding: 16px 20px;
+  font-size: 18px;
+  background: linear-gradient(
+    45deg,
+    transparent 5%,
+    oklch(57.7% 0.245 27.325) 5%
+  );
+  border: 0;
+  color: var(--color-font);
+  letter-spacing: 1px;
+  line-height: 1;
+  /* box-shadow: 6px 0px 0px oklch(79.2% 0.209 151.711); */
+  outline: transparent;
+  position: relative;
+}
+
+.cta::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "ONE OF US";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    oklch(79.2% 0.209 151.711) 3%,
+    oklch(79.2% 0.209 151.711) 5%,
+    oklch(14.5% 0 0) 5%
+  );
+  text-shadow: -3px -3px 0px oklch(57.7% 0.245 27.325),
+    3px 3px 0px oklch(0.8431 0.1437 203.76);
+  clip-path: var(--slice-0);
+}
+
+.cta:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
 }
 
 .cta:hover {
-  background-color: var(--color-red);
-  color: var(--color-font);
-  transform: scale(1.1);
-}
-
-.nav-item:last-of-type > a:hover {
-  background-color: var(--color-red);
-  color: var(--color-font);
+  box-shadow: 15px var(--color-green);
 }
 
 /*^ ///////////////////////////////////////////////////// */
-/*^ //////////////      RECRUTEMENT      //////////////// */
+/*^ //////////////         INDEX         //////////////// */
+/*^ ///////////////////////////////////////////////////// */
+
+/* body > main */
+.index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*^ ///////////////////////////////////////////////////// */
+/*^ ///////////////      APPLICATIONS      ////////////// */
 /*^ ///////////////////////////////////////////////////// */
 
 ::placeholder {
