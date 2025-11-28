@@ -26,3 +26,22 @@ Thumbs.db
 
 # Autres fichiers
 *.bat
+
+# Vite
+.vite/
+vite.config.js.timestamp-*
+
+# TypeScript
+*.tsbuildinfo
+
+# Tests
+coverage/
+.nyc_output/
+
+# Cache outils
+.eslintcache
+.stylelintcache
+
+# Archives
+*.tgz
+*.tar.gz
